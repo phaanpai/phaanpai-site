@@ -1,5 +1,5 @@
 baseURL = 'https://phaanpai-site.pages.dev/'
 languageCode = 'th'
 defaultContentLanguage = 'th'
-title = 'PhaanPai'
+title = 'PhaanPai Website'
 theme = "PaperMod"
