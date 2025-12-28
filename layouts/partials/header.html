@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ .Site.BaseURL }}" aria-label="Home">
+      <img src="/images/brand/phaanpai_logo.png" alt="PhaanPai" class="brand-logo" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="{{ "posts/" | relURL }}" class="nav-link">Posts</a>
+      <a href="{{ "tags/" | relURL }}" class="nav-link">Tags</a>
+      <a href="{{ "categories/" | relURL }}" class="nav-link">Topics</a>
+      <a href="{{ "about/" | relURL }}" class="nav-link">About</a>
+
+      <!-- ใส่ลิงก์ YouTube ของคุณได้เลย -->
+      <a href="https://www.youtube.com/@PhaanPai" class="nav-link nav-pill" target="_blank" rel="noopener">
+        YouTube
+      </a>
+    </nav>
+  </div>
+</header>

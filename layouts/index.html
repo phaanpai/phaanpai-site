@@ -1,0 +1,115 @@
+{{- define "main" -}}
+<main class="main phaanpai-home">
+  <section class="pp-hero">
+    <div class="pp-hero__banner" role="img" aria-label="PhaanPai banner"></div>
+
+    <div class="pp-intro">
+      <div class="pp-intro__text">
+        <h1 class="pp-intro__title">ผ่านไป | PhaanPai</h1>
+        <p class="pp-intro__lead">
+          ช่องเล่าเรื่องชีวิตของคนธรรมดา ที่กำลังเดินไปข้างหน้า<br>
+          แม้บางวันจะเหนื่อย สับสน หรือไม่รู้คำตอบ
+        </p>
+        <div class="pp-intro__divider"></div>
+        <p class="pp-intro__body">
+          ไม่สอนให้สำเร็จเร็ว<br>
+          ไม่เร่งให้เก่งกว่าใคร<br>
+          แค่ชวนกันอยู่กับชีวิต<br>
+          ในวันที่ทุกอย่างค่อย ๆ ผ่านไป
+        </p>
+        <p class="pp-intro__closing">ผ่านไป — แต่เราไม่ได้หายไป</p>
+      </div>
+
+      <div class="pp-intro__actions">
+        <a class="pp-btn pp-btn--primary" href="#latest">เริ่มอ่านโพสต์ล่าสุด</a>
+        <a class="pp-btn pp-btn--ghost" href="/posts/">ดูโพสต์ทั้งหมด</a>
+
+        <div class="pp-mini">
+          <div class="pp-mini__label">Topics</div>
+          <div class="pp-mini__links">
+            <a href="/tags/ชีวิต/">ชีวิต</a>
+            <a href="/tags/ครอบครัว/">ครอบครัว</a>
+            <a href="/tags/งาน/">งาน</a>
+            <a href="/tags/ใจ/">ใจ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* Latest posts */}}
+  {{- $pages := where .Site.RegularPages "Section" "posts" -}}
+  {{- if not $pages -}}
+    {{- $pages = where .Site.RegularPages "Type" "posts" -}}
+  {{- end -}}
+
+  <section id="latest" class="pp-latest">
+    <div class="pp-section-head">
+      <h2 class="pp-section-title">โพสต์ล่าสุด</h2>
+      <a class="pp-section-link" href="/posts/">โพสต์ทั้งหมด →</a>
+    </div>
+
+    <div class="pp-grid">
+      {{- range first 6 $pages -}}
+      <article class="pp-card">
+        <a class="pp-card__link" href="{{ .RelPermalink }}">
+      
+          {{/* Thumbnail */}}
+          {{ $thumb := "" }}
+
+          {{ with .Params.thumbnail }}
+            {{ $thumb = . }}
+          {{ else }}
+            {{ with .Params.cover }}
+              {{ with .image }}
+                {{ $thumb = . }}
+              {{ end }}
+            {{ end }}
+            {{ if not $thumb }}
+              {{ with .Params.images }}
+                {{ if gt (len .) 0 }}
+                  {{ $thumb = index . 0 }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if $thumb }}
+            <div class="pp-card__thumb">
+              <img src="{{ $thumb | relURL }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+            </div>
+          {{ else }}
+            <div class="pp-card__thumb pp-card__thumb--empty"></div>
+          {{ end }}
+
+      
+          <h3 class="pp-card__title">{{ .Title }}</h3>
+      
+          <div class="pp-card__meta">
+            <time datetime="{{ .Date }}">{{ .Date.Format "02 Jan 2006" }}</time>
+            {{ with .Params.categories }}
+              <span class="pp-dot">•</span>
+              <span class="pp-cat">{{ index . 0 }}</span>
+            {{ end }}
+          </div>
+      
+          <p class="pp-card__summary">
+            {{ .Plain | truncate 180 }}
+          </p>
+      
+          {{ with .Params.tags }}
+            <div class="pp-tags">
+              {{ range first 3 . }}
+                <span class="pp-tag">#{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+      
+        </a>
+      </article>
+      
+      {{- end -}}
+    </div>
+  </section>
+</main>
+{{- end -}}

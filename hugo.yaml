@@ -1,0 +1,43 @@
+baseURL: "https://phaanpai-site.pages.dev/
+languageCode: "th"
+title: "PhaanPai"
+theme: "PaperMod"
+
+paginate: 12
+enableRobotsTXT: true
+
+params:
+  defaultTheme: light
+  disableThemeToggle: true   # ✅ ไม่เอาปุ่ม toggle (กันพังไปเลย)
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  assets:
+    disableHLJS: true
+  customCSS:
+    - "css/extended/custom.css"
+  label:
+    icon: "/images/phaanpai-logo.png"
+    iconHeight: 80
+    text: ""   # สำคัญ: ไม่ต้องมีชื่อเว็บ
+
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 1
+    - name: Tags
+      url: /tags/
+      weight: 2
+    - name: Topics
+      url: /categories/
+      weight: 3
+    - name: About
+      url: /about/
+      weight: 4
+    - name: YouTube
+      url: https://youtube.com/
+      weight: 5
+

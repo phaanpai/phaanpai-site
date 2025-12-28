@@ -1,0 +1,45 @@
+<article class="pp-card">
+  <a class="pp-card-link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+    {{- $thumb := "" -}}
+
+    {{- with .Params.images -}}
+      {{- $thumb = (index . 0) -}}
+    {{- end -}}
+
+    {{- if not $thumb -}}
+      {{- with .Params.cover.image -}}
+        {{- $thumb = . -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if $thumb -}}
+      <div class="pp-thumb">
+        <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
+      </div>
+    {{- else -}}
+      <div class="pp-thumb pp-thumb--empty"></div>
+    {{- end -}}
+
+    <div class="pp-card-body">
+      <h3 class="pp-title">{{ .Title }}</h3>
+      <div class="pp-meta">
+        <time datetime="{{ .Date }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        {{- with .Params.categories -}}
+          <span>•</span><span>{{ index . 0 }}</span>
+        {{- end -}}
+      </div>
+
+      {{- with .Summary -}}
+        <p class="pp-excerpt">{{ . | plainify }}</p>
+      {{- end -}}
+
+      {{- with .Params.tags -}}
+        <div class="pp-tags">
+          {{- range first 3 . -}}
+            <span class="pp-tag">#{{ . }}</span>
+          {{- end -}}
+        </div>
+      {{- end -}}
+    </div>
+  </a>
+</article>

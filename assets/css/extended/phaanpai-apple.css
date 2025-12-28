@@ -1,0 +1,173 @@
+/* Apple-ish layout width */
+:root{
+  --pp-max: 980px;
+}
+
+/* Make PaperMod main container feel wider (optional) */
+.main, .page-header, .post-content, .first-entry, .entry-header, .entry-content {
+  max-width: var(--pp-max);
+}
+
+/* Our home wrapper */
+.pp-wrap{
+  max-width: var(--pp-max);
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+/* Top header (same width as main) */
+.pp-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding: 10px 4px 18px;
+}
+
+/* Logo only (minimal like Apple) */
+.pp-logo img{
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display:block;
+}
+
+/* Clean nav */
+.pp-nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.pp-nav a{
+  font-size: 14px;
+  opacity: .85;
+  text-decoration:none;
+}
+.pp-nav a:hover{ opacity: 1; }
+
+/* Hero banner */
+.pp-hero{
+  margin-top: 8px;
+}
+.pp-heroBanner{
+  border-radius: 18px;
+  overflow:hidden;
+  background: #f5f5f7; /* Apple grey */
+  border: 1px solid rgba(0,0,0,.06);
+}
+.pp-heroBanner img{
+  width:100%;
+  height: 320px;
+  object-fit: cover;
+  display:block;
+}
+
+/* Intro card under banner */
+.pp-intro{
+  margin-top: 14px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: #f5f5f7;   /* Apple grey blocks */
+  border: 1px solid rgba(0,0,0,.06);
+}
+.pp-intro p{ margin: 10px 0; line-height: 1.75; }
+.pp-muted{ opacity:.8; }
+.pp-strong{ font-weight: 700; margin-top: 8px; }
+
+/* Buttons */
+.pp-cta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 12px;
+}
+.pp-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration:none;
+  border: 1px solid rgba(0,0,0,.10);
+}
+.pp-btnPrimary{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+.pp-btnGhost{
+  background: transparent;
+  color: inherit;
+}
+
+/* Latest section */
+.pp-latest{
+  margin-top: 28px;
+}
+.pp-sectionHead{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 12px;
+}
+.pp-sectionHead h2{
+  font-size: 22px;
+  margin:0;
+}
+.pp-link{
+  font-size: 14px;
+  text-decoration:none;
+  opacity:.85;
+}
+.pp-link:hover{ opacity:1; }
+
+/* Grid cards like Apple grey blocks */
+.pp-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 820px){
+  .pp-grid{ grid-template-columns: 1fr; }
+  .pp-heroBanner img{ height: 240px; }
+}
+
+/* Card */
+.pp-card{
+  background:#f5f5f7;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  overflow:hidden;
+}
+.pp-cardLink{
+  display:block;
+  padding: 16px 16px 14px;
+  color: inherit;
+  text-decoration:none;
+}
+.pp-cardTitle{
+  margin:0 0 8px;
+  font-size: 18px;
+}
+.pp-meta{
+  font-size: 13px;
+  opacity: .75;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom: 10px;
+}
+.pp-dot{ opacity:.6; }
+.pp-summary{
+  margin:0;
+  line-height:1.65;
+  opacity:.9;
+}
+
+/* IMPORTANT: remove extra icons you mentioned (moon etc.) by hiding theme toggle if it exists */
+#theme-toggle { display:none !important; }
+
+.logo img { max-height: 18px !important; }

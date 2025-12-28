@@ -1,5 +1,6 @@
 baseURL = 'https://phaanpai-site.pages.dev/'
 languageCode = 'th'
 defaultContentLanguage = 'th'
-title = 'ผ่านไป | PhaanPai'
+title = "ผ่านไป | PhaanPai"
+tagline = "ช่องเล่าเรื่องชีวิตของคนธรรมดา ที่กำลังเดินไปข้างหน้า แม้บางวันจะเหนื่อย สับสน หรือไม่รู้คำตอบ"
 theme = "PaperMod"

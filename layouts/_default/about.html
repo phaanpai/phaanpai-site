@@ -1,0 +1,16 @@
+{{- define "main" -}}
+<main class="main pp-about">
+  <article class="pp-about__wrap">
+    <header class="pp-about__header">
+      <h1 class="pp-about__title">{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p class="pp-about__desc">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="pp-about__content">
+      {{ .Content }}
+    </div>
+  </article>
+</main>
+{{- end -}}
