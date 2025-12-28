@@ -294,5 +294,7 @@
   text-decoration: underline;
 }
 
-
+.pp-intro__lead, .pp-intro__body, .pp-intro__closing{
+  font-size: 14px !important;
+}
 
