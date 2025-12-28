@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ลาออก on ผ่านไป เว็บไซต์</title>
+    <link>http://localhost:1313/tags/%E0%B8%A5%E0%B8%B2%E0%B8%AD%E0%B8%AD%E0%B8%81/</link>
+    <description>Recent content in ลาออก on ผ่านไป เว็บไซต์</description>
+    <generator>Hugo -- 0.153.1</generator>
+    <language>th</language>
+    <lastBuildDate>Sun, 28 Dec 2025 11:10:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E0%B8%A5%E0%B8%B2%E0%B8%AD%E0%B8%AD%E0%B8%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ทำไมเราถึงอยากลาออกจากงาน</title>
+      <link>http://localhost:1313/posts/why-we-want-to-quit-the-job/</link>
+      <pubDate>Sun, 28 Dec 2025 11:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/why-we-want-to-quit-the-job/</guid>
+      <description>เมื่อเรามองงาน ชีวิต และระบบที่เราอยู่ แล้วย้อนถามตัวเองว่า ถึงจุดที่เราจะลาออกจากงานแล้วหรือยัง?</description>
+    </item>
+  </channel>
+</rss>
