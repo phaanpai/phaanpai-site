@@ -7,8 +7,7 @@ categories: ["Reflection"]
 draft: false
 description: "เพราะเขารู้ว่าการเป็นพ่อแม่มันเหนื่อยแค่ไหน และอยากช่วยในวันที่ทำได้"
 ---
-
-![ทำไมตายายสปอยหลาน](/images/thumbnail-why-grandparents-love-grandchildren.png)
+{{< youtube oUHFPwi0rt0 >}}
 
 ## บันทึกความคิดเรื่องครอบครัว
 
